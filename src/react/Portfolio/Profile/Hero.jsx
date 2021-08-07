@@ -23,13 +23,13 @@ const Hero = () => {
             <div className="column column2">
                 <h2>{ chosenItem.title }</h2>
 
-                <div className='description'>
+                <p className='description'>
                     <b>Description:</b> <span dangerouslySetInnerHTML={{ __html: chosenItem.description }} />
-                </div>
+                </p>
 
-                <div className='tools'>
+                <p className='tools'>
                     <b>Tools:</b> <span dangerouslySetInnerHTML={{ __html: chosenItem.tools }} />
-                </div>
+                </p>
 
                 <ButtonLink
                     href={ chosenItem.link }
