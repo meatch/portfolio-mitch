@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 /* Context ---------------------------*/
 import Context from '../context/store.js';
@@ -15,11 +15,11 @@ const Item = ({item}) => {
 
     return (
         <ItemStyled
-            className='Item' 
+            className='Item'
             queries={ queries }
-            onClick={ () => { 
-                dispatch(chosenItemSet(item)) 
-                dispatch(profileShowSet(true)) 
+            onClick={ () => {
+                dispatch(chosenItemSet(item))
+                dispatch(profileShowSet(true))
             }}
         >
             <img src={ item.image } alt={ `Portfolio: ${item.title}` } />
@@ -31,20 +31,8 @@ const Item = ({item}) => {
 export default Item;
 
 const ItemStyled = styled.div`
-    border: solid 1px #b5b5b5;
+    border: solid 1px #e6e6e6;
     position: relative;
-
-    ${ ({queries}) => { 
-        if (queries.isSmall) { 
-            return css`width: 100%; margin-bottom: 10px;`; 
-        }
-        if (queries.isMedium) { 
-            return css`width: 50%;`; 
-        }
-        if (queries.isLarge) { 
-            return css`width: 33.3333333%;`; 
-        }
-    }}
 
     img {
         max-width: 100%;
@@ -53,7 +41,7 @@ const ItemStyled = styled.div`
 
     .title {
         position: absolute;
-        left: 0px; right: 0px; top: 0px; bottom: 0px; 
+        left: 0px; right: 0px; top: 0px; bottom: 0px;
         background-color: rgba(8, 35, 43, 0.87);
         color: white;
         display: flex;
