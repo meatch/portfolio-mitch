@@ -27,7 +27,7 @@ $newAssocRecords = convertCSVToAssoc($csv);
 | Handle Inserting into MySQL
 ---------------------------*/
 if ($execute) {
-    
+
     /* Insert ---------------------------*/
     $items = [];
 
