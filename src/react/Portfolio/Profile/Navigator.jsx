@@ -11,10 +11,10 @@ import Button from '../../common/Forms/Controls/Button.jsx';
 const Navigator = () => {
 
     const { state, dispatch } = useContext(Context);
-    
+
     const items = state.items;
     const chosenItem = state.chosenItem;
-    
+
     const getPrevItem = () => {
         const prevSortOrder = parseInt(chosenItem.sortOrder) - 1;
 
@@ -56,5 +56,12 @@ export default Navigator;
 const NavigatorStyled = styled.div`
 
     text-align: center;
-    
+
+    .Button {
+        background-color: transparent;
+        border: none;
+        color: black;
+        padding: 0px 22px;
+    }
+
 `;
