@@ -12,6 +12,8 @@ import NavSocial from './NavSocial.jsx';
 import Portfolio from './Portfolio/Portfolio.jsx';
 import HireMe from './HireMe/HireMe.jsx';
 
+import Marvel from './Marvel/Marvel.jsx';
+
 const App = () => {
 
     const queries = useMediaQuery();
@@ -31,6 +33,7 @@ const App = () => {
                     <main>
                         <Switch>
                             <Route path='/hireme' component={ HireMe } />
+                            <Route path='/marvel' component={ Marvel } />
                             <Route path='/' exact component={ Portfolio } />
                         </Switch>
                     </main>
@@ -38,7 +41,7 @@ const App = () => {
                         <div className='tagline' dangerouslySetInnerHTML={{ __html: config.footer.tagline } } />
                         <div className='copyright' dangerouslySetInnerHTML={{ __html: config.footer.copyright } } />
                     </footer>
-                </div> 
+                </div>
             </AppStyled>
         </BrowserRouter>
     );
@@ -53,7 +56,7 @@ const AppStyled = styled.div`
     background-repeat: no-repeat;
     background-color: #08232B;
     padding: 10px;
-    
+
     & > h2 {
         text-align: center;
         text-transform: uppercase;
@@ -63,14 +66,14 @@ const AppStyled = styled.div`
         .fullname { font-size: 80px; margin-bottom: 5px; }
         .title { font-size: 40px; }
 
-        ${ ({queries}) => { 
-            if (queries.isSmall) { 
+        ${ ({queries}) => {
+            if (queries.isSmall) {
                 return css`padding: 60px 0px;`;
             }
-            if (queries.isMedium) { 
+            if (queries.isMedium) {
                 return css`padding: 150px 0px;`;
             }
-            if (queries.isLarge) { 
+            if (queries.isLarge) {
                 return css`padding: 150px 0px;`;
             }
         }}
@@ -92,14 +95,14 @@ const AppStyled = styled.div`
             min-height: 500px;
             border-radius: 5px;
 
-            ${ ({queries}) => { 
-                if (queries.isSmall) { 
+            ${ ({queries}) => {
+                if (queries.isSmall) {
                     return css`padding: 10px;`;
                 }
-                if (queries.isMedium) { 
+                if (queries.isMedium) {
                     return css`padding: 10px;`;
                 }
-                if (queries.isLarge) { 
+                if (queries.isLarge) {
                     return css`padding: 20px;`;
                 }
             }}
