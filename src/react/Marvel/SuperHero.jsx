@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const SuperHero = ({hero}) => {
     return (
         <SuperHeroStyled className='SuperHero'>
-            <a href={ `/assets/img/Marvel/${hero}` }>
-                <img src={ `/assets/img/Marvel/${hero}` } />
+            <a href={ `/assets/img/marvel/${hero}` }>
+                <img src={ `/assets/img/marvel/${hero}` } />
             </a>
         </SuperHeroStyled>
     );
