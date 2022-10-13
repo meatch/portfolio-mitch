@@ -41,7 +41,7 @@
     "scripts": {
         "start": "NODE_ENV=production node express.js",
         "build": "react-scripts build",
-        "client": "react-scripts start",
+        "client": "react-scripts --openssl-legacy-provider start",
         "server": "nodemon express.js",
         "dev": "concurrently --kill-others-on-fail \"npm run server \" \"npm run client\" "
     },
