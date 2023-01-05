@@ -30,8 +30,8 @@ const HireMe = () => {
                             iconColor="rgba(255,255,255,1)"
                         />
 
-                        <h2>Let's Connect</h2>
-                        <ContactForm />
+                        {/* <h2>Let's Connect</h2>
+                        <ContactForm /> */}
                     </div>
                 </div>
             </PageTemplate>
@@ -43,29 +43,29 @@ export default HireMe;
 
 const HireMeStyled = styled.div`
 
-    ${ ({queries}) => { 
-        if (queries.isSmall) { 
+    ${ ({queries}) => {
+        if (queries.isSmall) {
             return css`
                 .row { display: block; }
                 .hero { margin-bottom: 10px; }
                 .deets h3 { font-size: 30px; line-height: 90%; }
-            `; 
+            `;
         }
-        if (queries.isMedium) { 
+        if (queries.isMedium) {
             return css`
                 .row { display: flex; }
                 .hero { flex: 2; }
                 .deets { flex: 3; padding: 0px 20px; }
                 .deets h3 { font-size: 45px; line-height: 90%; }
-            `; 
+            `;
         }
-        if (queries.isLarge) { 
+        if (queries.isLarge) {
             return css`
                 .row { display: flex; }
                 .hero { flex: 2; }
                 .deets { flex: 3; padding: 0px 20px; }
                 .deets h3 { font-size: 65px; line-height: 90%; }
-            `; 
+            `;
         }
     }}
 
