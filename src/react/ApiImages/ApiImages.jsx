@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 /* Components ---------------------------*/
 import Marvel from './Marvel/Marvel';
@@ -11,8 +11,8 @@ const ApiImages = () => {
         <ApiImagesStyled className='ApiImages'>
             <h1>Api Images</h1>
             <nav className="sublinks">
-                <a href="/api-images">Marvel</a>
-                <a href="/api-images/gijoe">GI Joe</a>
+                <Link to="/api-images">Marvel</Link>
+                <Link to="/api-images/gijoe">GI Joe</Link>
             </nav>
             <Switch>
                 <Route path='/api-images' exact component={ Marvel } />
