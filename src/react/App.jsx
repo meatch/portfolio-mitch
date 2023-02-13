@@ -12,7 +12,8 @@ import NavSocial from './NavSocial.jsx';
 import Portfolio from './Portfolio/Portfolio.jsx';
 import HireMe from './HireMe/HireMe.jsx';
 
-import Marvel from './Marvel/Marvel.jsx';
+/* Api Images ---------------------------*/
+import ApiImages from './ApiImages/ApiImages';
 
 const App = () => {
 
@@ -33,7 +34,7 @@ const App = () => {
                     <main>
                         <Switch>
                             <Route path='/hireme' component={ HireMe } />
-                            <Route path='/marvel' component={ Marvel } />
+                            <Route path='/api-images' component={ ApiImages } />
                             <Route path='/' exact component={ Portfolio } />
                         </Switch>
                     </main>
